@@ -5,11 +5,11 @@
   "license": "ISC",
   "author": "",
   "type": "module",
-  "main": "index.js",
+  "main": "src/Index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/Index.ts",
-    "start": "node Index.js"
+    "dev": "nodemon src/Index.js",
+    "start": "node src/Index.js"
   },
   "dependencies": {
     "accepts": "^2.0.0",
