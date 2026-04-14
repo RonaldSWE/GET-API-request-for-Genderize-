@@ -1,17 +1,17 @@
 // src/index.ts
-import express, { type Request, type Response } from "express";
+import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 
 // Middle wares
 const app = express();
 app.use(cors());
-const port: string | number = process.env.PORT || 3000;
+const port= process.env.PORT || 3000;
 
 dotenv.config();
 
-app.get("/api/classify", async (req: Request, res: Response) => {
-  const name = req.query.name as string | undefined;
+app.get("/api/classify", async (req, res) => {
+  const name = req.query.name;
 
   if (typeof name !== "string") {
     return res.status(422).json({
